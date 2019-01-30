@@ -1,0 +1,3 @@
+import vfdt
+
+vfdt.train()
