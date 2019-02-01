@@ -354,8 +354,8 @@ def calc_metrics(y_test, y_pred, row_name):
 def train():
     start_time = time.time()
     df = pd.read_csv('./dataset/waveform.data', header=None, sep=',')
-    # df = pd.read_csv('./dataset/default_of_credit_card_clients.csv', skiprows=1, header=0)
-    # df = df.drop(df.columns[0], axis=1)
+    df = pd.read_csv('./dataset/default_of_credit_card_clients.csv', skiprows=1, header=0)
+    df = df.drop(df.columns[0], axis=1)
     df = df.sample(frac=1).reset_index(drop=True)  # shuffle data rows
     title = list(df.columns.values)
     features = title[:-1]
